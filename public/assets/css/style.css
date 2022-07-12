@@ -1,8 +1,20 @@
 :root {
-    --bg-primeiracor: #000;
+    --bg-primeiracor: #000000;
     --bg-segundacor: #102347;
     --bg-terceiracor: #181818;
+    --bg-card: #283142;
+    --bg-input: #1B2531;
+    --bg-celulalighttabela: #283142;
+    --bg-celuladarktabela: #242C3B;
+    --bg-celulahover:#384459;
+    --borda-tabela: #5F6E82;
+    --borda-input:#384459;
+    --cor-btnicone: #FF6B72;
     --texto-principal: #ffffff;
+    --texto-card: #676FFF;
+    --texto-titulotabela: #E9E9E9;
+    --texto-campostabela: #CFCFCF;
+    --texto-input: #9AAABE;
 }
 
 * {
@@ -14,7 +26,7 @@
 
 html, body {
     color: var(--texto-principal);
-    background-color: var(--bg-principal);
+    background-color: var(--bg-primeiracor);
 }
 
 a, a:hover, a:visited {
@@ -48,4 +60,127 @@ header {
 .dsmeta-logo-container p {
     font-size: 14px;
     font-weight: 300;
+}
+
+#sales {
+    padding: 40px 10px;
+}
+
+.dsmeta-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.dsmeta-card {
+    background-color: var(--bg-card);
+    border-radius: 10px;
+    padding: 30px 10px;
+}
+
+.dsmeta-sales-title {
+    color: var(--texto-card);
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.dsmeta-form-control-container {
+    margin-bottom: 16px;
+    max-width: 300px;
+}
+.dsmeta-form-control {
+    width: 100%;
+    height: 46px;
+    background-color: var(--bg-input);
+    border: 1px solid var(--borda-input);
+    border-radius: 5px;
+    padding: 0 20px;
+    font-size: 18px;
+    color: var(--texto-input);
+}
+
+.dsmeta-sales-table {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.dsmeta-sales-table thead {
+    height: 55px;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--texto-titulotabela);
+}
+
+.dsmeta-sales-table tbody {
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    color: var(--texto-campostabela);
+}
+
+.dsmeta-sales-table tbody tr {
+    height: 74px;
+    border-top: 1px solid var(--borda-tabela);
+}
+
+.dsmeta-sales-table tbody tr:hover > td {
+    background-color: var(--bg-celulahover);
+}
+
+.dsmeta-sales-table tbody tr:nth-child(odd) {
+    background-color: var(--bg-celuladarktabela);
+}
+
+.dsmeta-red-btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+.dsmeta-red-btn {
+    height: 45px;
+    width: 45px;
+    background: rgba(255, 107, 114, 0.1);
+    border: 1px solid var(--cor-btnicone);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.dsmeta-red-btn img {
+    width: 19px;
+}
+
+.show576 {
+    display: none;
+}
+
+.show992 {
+    display: none;
+}
+
+@media (min-width: 576px) {
+    .show576 {
+        display: table-cell;
+    }
+
+    .dsmeta-card {
+        padding: 35px;
+    }
+
+    .dsmeta-sales-table tbody tr {
+        height: 55px;
+    }
+
+    .dsmeta-sales-table tbody {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 992px) {
+    .show992 {
+        display: table-cell;
+    }
 }
